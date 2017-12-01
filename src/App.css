@@ -1,0 +1,134 @@
+.App {
+  width: 1403px;
+  font-family: "Oswald", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  padding-right: 20px;
+  margin-top: 0;
+  background-image: url("./img/red-wallpaper.png");
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-attachment:fixed; 
+}
+
+.App-logo {
+  height: 100px;
+  margin-top: -25px;
+  width: 110px;
+}
+
+.pokemon {
+  margin-top: -15px;
+  width: 450px;
+  height: 150px;
+}
+
+.App-header {
+  height: 80px;
+  padding: 20px;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.panel {
+  padding: 20px;
+}
+
+.row1 {
+  margin-top: 50px;
+  background-color:  rgba(238, 238, 238, 0.88);
+  height: 600px;
+  width: 400px;
+  border: 10px solid #223187;
+  border-radius: 20px 0px 0px 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.row2 {
+  margin-top: -620px;
+  margin-left: 420px;
+  background-color:  rgba(238, 238, 238, 0.88);
+  height: 600px;
+  width: 520px;
+  border: 10px solid #14163d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.row3 {
+  margin-top: -620px;
+  margin-left: 960px;
+  padding-top: 10 px;
+  background-color:  rgba(238, 238, 238, 0.88);
+  height: 590px;
+  width: 380px;
+  border: 10px solid #223187;
+  border-radius: 0px 20px 20px 0px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 10px 0px 0px 24px;
+}
+
+.form {
+  margin: 20px;
+}
+
+input[type="text"] {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 10px 0px 0px 10px;
+  border: 2px solid #000;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+input[type="submit"] {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #000;
+  color: white;
+  border: 2px solid #000;
+  border-radius: 0px 10px 10px 0px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.save {
+  background-color: #000;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin-left: 240px;
+  width: 100px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.notes {
+    background-image: -webkit-linear-gradient(white, white 30px, #ccc 30px, #ccc 31px, white 31px);
+    background-image: -moz-linear-gradient(white, white 30px, #ccc 30px, #ccc 31px, white 31px);
+    background-image: -ms-linear-gradient(white, white 30px, #ccc 30px, #ccc 31px, white 31px);
+    background-image: -o-linear-gradient(white, white 30px, #ccc 30px, #ccc 31px, white 31px);
+    background-image: linear-gradient(white, white 30px, #ccc 30px, #ccc 31px, white 31px);
+    background-size: 100% 31px;
+    border: 1px solid #ccc;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    line-height: 31px;
+    font-family: Arial, Helvetica, Sans-serif;
+    padding: 8px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.label {
+  margin-left: 90px;
+  font-weight: bold;
+}
+
+.pikanotes {
+  width: 340px;
+}
