@@ -9,7 +9,8 @@ import Main from './Component/main';
 
   class App extends Component {
     state = {
-      search: ''
+      search: '',
+      details: {}
     }
 
   handleChange(e) {
@@ -18,16 +19,27 @@ import Main from './Component/main';
 
   handleSearch () {
     const { search } = this.state
+    var that = this
     const url = 'http://pokeapi.co/api/v2/pokemon'
     console.log('call api: ' , this.state.search)
     request.get(`${url}/${search}`)
     .end(function(err,res) {
       if(err) alert ('error')
-        console.log('res:',res)
+      else{
+        const pokeDetails = res.body
+        const newUrl = 'http://pokeapi.co/api/v1/description'
+        request.get(`${newUrl}/${pokeDetails.id}`)
+        .end(function(err,res) {
+          if(err) alert ('error')
+            that.setState({ details : pokeDetails,
+              desc: res.body})
+        })
+      }
     })
   }
 
   render() {
+    console.log('app state: ',this.state)
     return (
       <div className="App">
         <header className="App-header">
@@ -37,7 +49,7 @@ import Main from './Component/main';
           <div className="panel">
             <Search handleChange={this.handleChange.bind(this)}
             handleSearch={this.handleSearch.bind(this)}/>
-            <Main />
+            <Main details={this.state.details}/>
             <Notes />
         </div>
       </div>

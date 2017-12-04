@@ -42,10 +42,10 @@
 
 .row1 {
   margin-top: 50px;
-  background-color:  rgba(238, 238, 238, 0.88);
+  background-color:  transparent;
   height: 600px;
   width: 400px;
-  border: 10px solid #223187;
+  border: 10px solid #223187ba;
   border-radius: 20px 0px 0px 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -56,7 +56,7 @@
   background-color:  rgba(238, 238, 238, 0.88);
   height: 600px;
   width: 520px;
-  border: 10px solid #14163d;
+  border: 10px solid #000000ad;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -64,10 +64,10 @@
   margin-top: -620px;
   margin-left: 960px;
   padding-top: 10 px;
-  background-color:  rgba(238, 238, 238, 0.88);
+  background-color:  transparent;
   height: 590px;
   width: 380px;
-  border: 10px solid #223187;
+  border: 10px solid #223187ba;
   border-radius: 0px 20px 20px 0px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 10px 0px 0px 24px;
@@ -78,16 +78,18 @@
 }
 
 input[type="text"] {
-  margin-top: 20px;
   padding: 10px;
+  padding-left: 20px;
+  font-size: 20px;
   border-radius: 10px 0px 0px 10px;
   border: 2px solid #000;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-input[type="submit"] {
-  margin-top: 20px;
+button {
   padding: 10px;
+  font-size: 20px;
+  margin-top: 0px;
   background-color: #000;
   color: white;
   border: 2px solid #000;
@@ -103,6 +105,7 @@ input[type="submit"] {
   border-radius: 10px;
   padding: 10px;
   margin-left: 240px;
+  margin-top: 10px;
   width: 100px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -121,7 +124,7 @@ input[type="submit"] {
     font-family: Arial, Helvetica, Sans-serif;
     padding: 8px;
     margin-top: 0px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .label {
@@ -132,3 +135,84 @@ input[type="submit"] {
 .pikanotes {
   width: 340px;
 }
+
+.name {
+  margin-top: -30px;
+  margin-left: 70px;
+  text-shadow: 2px 2px 4px #000000;
+  color: white;
+}
+
+.img {
+  width: 190px;
+  margin-left: 30px;
+  margin-top: -25px; 
+  margin-bottom: 0px;
+}
+
+.top {
+  margin: 0px;
+  margin-bottom: 111px;
+  width: 400px;
+  height: 150px;
+  background-color: #000000ad;
+  border-bottom: 6px solid #223187ba;
+}
+
+.bottom {
+  margin: 0px;
+  margin-top: 111px;
+  width: 400px;
+  height: 150px;
+  background-color: #000000ad;
+  border-top: 6px solid #223187ba;
+}
+
+.table {
+  height: 380px;
+  margin-top: 2px;
+}
+
+.table , th, td{
+  width: 520px;
+  border: 2px solid #be1f2ed4;
+}
+
+.table th {
+    background:radial-gradient(circle at 1.98% 20.98%,#c53d4a,transparent 100%),radial-gradient(circle at 98.02% 20.98%,#c53d4a91,transparent 100%),radial-gradient(circle at 50% 50%,#c53d99bd,#c53d6dbd 100%);
+    color: white;
+}
+
+.table td {
+  font-size: 15px;
+}
+
+.table td, th {
+  padding: 5px;
+  vertical-align: top;
+}
+
+.def {
+  border: none;
+  font-size: 12px;
+}
+
+.container {
+  width: 250px;
+  height: 180px;
+  margin-left: 120px;
+  margin-top: 5px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background:radial-gradient(circle at 1.98% 20.98%,#ffd9004f,transparent 100%),radial-gradient(circle at 98.02% 20.98%,#c53d4a91,transparent 100%),radial-gradient(circle at 50% 50%,#c53d99bd,#4b6cb7 100%);
+  }
+
+  hr {
+    width: 400px;
+    height: 5px;
+    background:radial-gradient(circle at 1.98% 20.98%,#4b6cb7,transparent 100%),radial-gradient(circle at 98.02% 20.98%,#182848,transparent 100%),radial-gradient(circle at 50% 50%,#0cc285,#0cc285 100%);
+    border: none;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
