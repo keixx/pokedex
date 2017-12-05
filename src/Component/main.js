@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import '../App.css';
-//import PokemonType from './PokemonType';
 
 class Main extends Component {
   state = { 
@@ -10,6 +9,32 @@ class Main extends Component {
     this.setState({ result: nextProps.details})
 
   }
+
+renderTypes(types) {
+  console.log(types)
+  var type = []
+  if(types) {
+    types.map((item, index) => {
+      if (index < 3) {
+        type = type.concat(<h5 className="h5" key={index}>{ " * " + item.type.name}</h5>)
+      }
+    } )
+  }
+  return type
+}
+
+renderBaseStats(stats) {
+  console.log(stats)
+  var basestat = []
+  if(stats) {
+    stats.map((item, index) => {
+      if (index < 6) {
+        basestat = basestat.concat(<h5 key={index}>{item.stat.name + " : " + item.base_stat}</h5>)
+      }
+    } )
+  }
+  return basestat
+}
 
 renderMoves(moves) {
   console.log(moves)
@@ -37,55 +62,47 @@ renderAbilities(abilities) {
   return ability
 }
 
-renderTypes(types) {
-  console.log(types)
-  var type = []
-  if(types) {
-    types.map((item, index) => {
-      if (index < 3) {
-        type = type.concat(<h5 key={index}>{item.type.name}</h5>)
-      }
-    } )
-  }
-  return type
-}
-
-
-
   render() {
-    const { sprites,abilities,moves,name,types,descriptions,height,weight,weakness} = this.state.result
+    const { sprites,abilities,moves,name,types,descriptions,height,weight,stats} = this.state.result
     const img = !sprites ? '' : sprites.front_default
+    const des = !descriptions ? '' : descriptions.id
 
     console.log(this.props, 'state: ', this.state)
     return (
     	<div className="row2" >
         <div className="panel">
-        <div className="container"><img className="img" src = {img} />
-        <h2 className="name">{name}</h2></div></div>
-      <center>
+        <center>
+        <div className="container">
+        <img className="img" src = {img} />
+        </div>
+        </center></div>
+        <center>
         <table className="table">
-        <tr>
-          <th colspan="3" >Descriptions</th>
-        </tr>
-        <tr>
-          {descriptions}
-          <tr>
-            <td className="def"><b>  Height: </b>{height} </td>
-          </tr>
-          <tr>
-            <td className="def"><b>  Weight: </b>{weight} </td>
-          </tr>
-        </tr>
-        <tr>
-          <th>Types</th>
-          <th>Moves</th>
-          <th>Abilities</th>
-        </tr>
-        <tr>
-          <td>{this.renderTypes(types)}</td>
-          <td>{this.renderMoves(moves)}</td>
-          <td>{this.renderAbilities(abilities)}</td>
-        </tr>
+          <tbody>
+            <tr>
+              <th colSpan="3" >{name}</th>
+            </tr>
+            <tr>
+              <td rowSpan="3" colSpan="2"/>
+              <td ><b>Types: </b>{this.renderTypes(types)}</td>
+            </tr>
+            <tr>
+              <td ><b>  Height: </b>{height} </td>
+            </tr>
+            <tr>
+              <td ><b>  Weight: </b>{weight} </td>
+            </tr>
+            <tr>
+              <th>Statistics</th>
+              <th>Moves</th>
+              <th>Abilities</th>
+            </tr>
+            <tr>
+              <td>{this.renderBaseStats(stats)}</td>
+              <td>{this.renderMoves(moves)}</td>
+              <td>{this.renderAbilities(abilities)}</td>
+            </tr>
+          </tbody>
         </table>
       </center>
       </div>
