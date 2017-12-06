@@ -243,6 +243,7 @@ button {
 
 legend {
   margin-top: 5px;
+  margin-left: 75px;
   padding: 0px;
   position: absolute;
   z-index: 2;
