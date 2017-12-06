@@ -38,14 +38,14 @@ import pokemon from './img/Pokemon_Logo.png';
   handleSearch () {
     const { search } = this.state
     var that = this
-    const url = 'http://pokeapi.co/api/v2/pokemon'
+    const url = 'https://pokeapi.co/api/v2/pokemon'
     console.log('call api: ' , this.state.search)
     request.get(`${url}/${search}`)
     .end(function(err,res) {
       if(err) alert ('No Data Found!')
       else{
         const pokeDetails = res.body
-        const newUrl = 'http://pokeapi.co/api/v1/description'
+        const newUrl = 'https://pokeapi.co/api/v1/description'
         request.get(`${newUrl}/${pokeDetails.id}`)
         .end(function(err,res) {
           if(err) alert ('No Data Found!')

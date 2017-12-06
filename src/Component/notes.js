@@ -24,7 +24,8 @@ class Notes extends Component {
     return (
     	<div className="row3">
         <img src={top} className="pikanotes" alt="logo" />
-        <center><legend>Write Some Notes</legend>
+        <center>
+          <legend>Write Some Notes</legend>
         <textarea onChange={this.props.handleChange} name="message" rows="3" cols="40" className="note" value={this.props.note}/>
         <button onClick={this.props.handleSave} type="button" className="save">Save</button> 
           <div className="comment_box">

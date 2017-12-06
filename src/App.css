@@ -1,5 +1,5 @@
 .App {
-  width: 1403px;
+  width: 1390px;
   font-family: "Oswald", Helvetica, Arial, sans-serif;
   font-weight: 300;
   text-transform: uppercase;
@@ -243,7 +243,6 @@ button {
 
 legend {
   margin-top: 5px;
-  margin-left: 80px;
   padding: 0px;
   position: absolute;
   z-index: 2;
@@ -251,6 +250,8 @@ legend {
   text-shadow: 2px 2px 4px #000000;
   color: white;
   font-size: 22px;
+  text-align: center;
+  
 }
 
 .h5 {
