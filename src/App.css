@@ -109,10 +109,10 @@ button {
   position: absolute;
   z-index: 2;
   margin-left: -230px;
-  margin-top: 387px;
+  margin-top: 165px;
 }
 
-.notes {
+.note {
     background-image: -webkit-linear-gradient(white, white 30px, #ccc 30px, #ccc 31px, white 31px);
     background-image: -moz-linear-gradient(white, white 30px, #ccc 30px, #ccc 31px, white 31px);
     background-image: -ms-linear-gradient(white, white 30px, #ccc 30px, #ccc 31px, white 31px);
@@ -124,9 +124,32 @@ button {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     line-height: 31px;
     font-family: Arial, Helvetica, Sans-serif;
+    padding: 35px;
+    margin-top: 18px;
+    margin-bottom: 17px;
+    text-align: center;
+}
+
+
+.notes {
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.68) 30px, #ccc 30px, #ccc 31px, rgba(0, 0, 0, 0.68) 31px);
+    background: -moz-linear-gradient(rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.68) 30px, #ccc 30px, #ccc 31px, rgba(0, 0, 0, 0.68) 31px);
+    background: -ms-linear-gradient(rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.68) 30px, #ccc 30px, #ccc 31px, rgba(0, 0, 0, 0.68) 31px);
+    background: -o-linear-gradient(rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.68) 30px, #ccc 30px, #ccc 31px, rgba(0, 0, 0, 0.68) 31px);
+    background: linear-gradient(rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.68) 30px, #ccc 30px, #ccc 31px, rgba(0, 0, 0, 0.68) 31px);
+    background-size: 100% 31px;
+    border: 1px solid #ccc;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    line-height: 31px;
+    font-family: Arial, Helvetica, Sans-serif;
     padding: 8px;
-    margin-top: 20px;
-    margin-bottom: 22px;
+    margin-top: 220px;
+    margin-left: -350px;
+    margin-bottom: 10px;
+    color: white;
+    position: absolute;
+    z-index: 0;
 }
 
 .label {
@@ -141,6 +164,14 @@ button {
   filter: alpha(opacity=50);
 }
 
+.pikanotes1 {
+  margin-top: 22px;
+  width: 380px;
+  height: 80px;
+  opacity: 0.9;
+  filter: alpha(opacity=50);
+}
+
 .name {
   margin-top: 0px;
   text-shadow: 2px 2px 4px #000000;
@@ -149,7 +180,7 @@ button {
 
 .img {
   width: 140px;
-  margin-top: 10px; 
+  margin-top: 7px; 
   margin-bottom: 0px;
 }
 
@@ -163,12 +194,13 @@ button {
 }
 
 .table {
-  height: 400px;
-  margin-top: 2px;
+  height: 380px;
+  margin-top: 10px;
+  border: 2px solid #be1f2ed4;
 }
 
 .table , th, td{
-  width: 540px;
+  width: 520px;
   text-align: center;
   vertical-align: middle;
 }
@@ -182,23 +214,19 @@ button {
 
 .table td {
   font-size: 12px;
-  border: 2px solid #be1f2ed4;
+  border: 1px solid #be1f2ed4;
   vertical-align: top;
   padding-top: 10px;
 }
 
 .table .def {
   border: none;
-  font-size: 12px;
-  text-align: left;
-  padding: 0px;
-  margin:0px;
 }
 
 .container {
   width: 180px;
   height: 150px;
-  margin-top: -10px;
+  margin-top: 0px;
   border-radius: 50%;
   box-shadow: 2px 6px 10px 2px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background:radial-gradient(circle at 1.98% 20.98%,#ffd9004f,transparent 100%),radial-gradient(circle at 98.02% 20.98%,#c53d4a91,transparent 100%),radial-gradient(circle at 50% 50%,#c53d99bd,#4b6cb7 100%);
@@ -228,6 +256,34 @@ legend {
 .h5 {
   padding-right: 4px;
   display: inline-block;
-  font-size: 12px;
+  font-size: 11px;
   margin: 0px;
+  font-weight: normal;
+}
+
+
+p {
+  position: absolute;
+  z-index: 2;
+}
+
+h3 {
+  padding: 0px;
+  margin: 0px;
+}
+
+h4{
+  color: white;
+  font-size: 12px;
+}
+
+.comment_box{
+  background-color: #00000096;
+  width: 350px;
+  height: 190px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  border-radius: 20px;
+  padding-top: 12px;
+  overflow: auto;
 }

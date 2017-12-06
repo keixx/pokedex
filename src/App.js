@@ -1,20 +1,38 @@
 import React, { Component } from 'react';
 import './App.css';
-import logo from './img/open.gif';
-import pokemon from './img/Pokemon_Logo.png';
 import request from 'superagent';
+
 import Search from './Component/search';
 import Notes from './Component/notes';
 import Main from './Component/main';
 
+import logo from './img/open.gif';
+import pokemon from './img/Pokemon_Logo.png';
+
+
+
   class App extends Component {
     state = {
       search: '',
+      note: '',
+      notes: [],
       details: {}
     }
 
-  handleChange(e) {
-    this.setState({ search: e.target.value})
+  handleChange(prop, e) {
+    console.log(prop)
+    this.setState({ [prop]: e.target.value })
+  }
+
+  handleSave(e) {
+    var obj = {
+      id : this.state.details.id,
+      notes : this.state.note
+    }
+      this.setState ({
+        notes : this.state.notes.concat(obj),
+        note : ''
+      })
   }
 
   handleSearch () {
@@ -24,13 +42,13 @@ import Main from './Component/main';
     console.log('call api: ' , this.state.search)
     request.get(`${url}/${search}`)
     .end(function(err,res) {
-      if(err) alert ('error')
+      if(err) alert ('No Data Found!')
       else{
         const pokeDetails = res.body
         const newUrl = 'http://pokeapi.co/api/v1/description'
         request.get(`${newUrl}/${pokeDetails.id}`)
         .end(function(err,res) {
-          if(err) alert ('error')
+          if(err) alert ('No Data Found!')
             that.setState({ details : pokeDetails,
               desc: res.body})
         })
@@ -47,10 +65,15 @@ import Main from './Component/main';
           <img src={logo} className="App-logo" alt="logo" /></center>
         </header>
           <div className="panel">
-            <Search handleChange={this.handleChange.bind(this)}
-            handleSearch={this.handleSearch.bind(this)}/>
+            <Search 
+              handleChange={this.handleChange.bind(this,'search')}
+              handleSearch={this.handleSearch.bind(this)}/>
             <Main details={this.state.details}/>
-            <Notes />
+            <Notes 
+              handleChange={this.handleChange.bind(this,'note')}
+              handleSave={this.handleSave.bind(this)}
+              {...this.state}
+            />
         </div>
       </div>
     );
